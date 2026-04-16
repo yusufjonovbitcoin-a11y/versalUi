@@ -46,8 +46,11 @@ export function Navigation() {
         >
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <span className={`font-display tracking-tight transition-all duration-500 ${isScrolled ? "text-xl text-foreground" : "text-2xl text-white"}`}>COMPUTE</span>
-            <span className={`font-mono transition-all duration-500 ${isScrolled ? "text-[10px] mt-0.5 text-muted-foreground" : "text-xs mt-1 text-white/60"}`}>TM</span>
+            <img
+              src="/images/logo-transparent.png"
+              alt="International Migration Line"
+              className={`w-auto transition-all duration-500 brightness-0 invert ${isScrolled ? "h-12" : "h-14"}`}
+            />
           </a>
 
           {/* Desktop Navigation */}

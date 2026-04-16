@@ -225,14 +225,14 @@ export function FeaturesSection() {
               <ParticleVisualization />
               <div className="relative z-10">
                 <span className="font-mono text-sm text-muted-foreground">{features[0].number}</span>
-                <h3 className="text-3xl lg:text-4xl font-display mt-4 mb-6 group-hover:translate-x-2 transition-transform duration-500">
+                <h3 className="text-3xl lg:text-4xl font-display text-white mt-4 mb-6 group-hover:translate-x-2 transition-transform duration-500">
                   {features[0].title}
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-md mb-8">
                   {features[0].description}
                 </p>
                 <div>
-                  <span className="text-5xl lg:text-6xl font-display">{features[0].stats.value}</span>
+                  <span className="text-5xl lg:text-6xl font-display text-white">{features[0].stats.value}</span>
                   <span className="block text-sm text-muted-foreground font-mono mt-2">{features[0].stats.label}</span>
                 </div>
               </div>
