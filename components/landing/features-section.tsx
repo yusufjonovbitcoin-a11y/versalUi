@@ -5,9 +5,9 @@ import { useEffect, useRef, useState } from "react";
 const features = [
   {
     number: "01",
-    title: "Autonomous Execution",
-    description: "Deploy AI agents that work independently. They analyze, decide, and execute complex multi-step tasks without human intervention.",
-    stats: { value: "99.7%", label: "task completion" },
+    title: "Bizning muavfaqiyat",
+    description: "Biz 170+ ishonchli xorijiy ish beruvchilar bilan rasmiy shartnomalarga egamiz, bu esa mijozlarimizga keng tanlov va barqaror ish imkoniyatlarini taqdim etadi.",
+    stats: { value: "98.7%", label: "Bizning MUaffaqiyat kayfisenti" },
   },
   {
     number: "02",
@@ -180,32 +180,57 @@ export function FeaturesSection() {
     <section
       id="features"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 overflow-hidden bg-black"
+      className="relative pt-36 pb-24 lg:pt-48 lg:pb-[1px] overflow-hidden bg-black"
     >
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-[33px]">
         {/* Header - Full width with diagonal layout */}
         <div className="relative mb-24 lg:mb-32">
-          <div className="grid lg:grid-cols-12 gap-8 items-end">
-            <div className="lg:col-span-7">
-              <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
-                <span className="w-12 h-px bg-foreground/30" />
-                Capabilities
-              </span>
+          <div className="-mt-10 lg:-mt-20 grid lg:grid-cols-12 gap-8 items-end">
+            <div className="lg:col-span-7 self-start">
               <h2
-                className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${
+                className={`-mt-4 lg:mt-[1px] text-6xl md:text-7xl lg:text-[128px] font-display text-white tracking-tight leading-[0.9] transition-all duration-1000 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                Intelligent
+                Biz
                 <br />
-                <span className="text-muted-foreground">workers.</span>
+                xaqimizda
               </h2>
+              <div
+                className={`mt-8 lg:mt-10 w-full max-w-md transition-all duration-1000 delay-300 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                }`}
+              >
+                <div className="relative h-px bg-white/20 overflow-hidden">
+                  <span className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-transparent via-white/90 to-transparent motion-safe:animate-pulse" />
+                </div>
+                <div className="mt-3 flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-white/80 animate-pulse" />
+                  <span className="h-1 w-1 rounded-full bg-white/60 animate-pulse [animation-delay:250ms]" />
+                  <span className="h-1 w-1 rounded-full bg-white/40 animate-pulse [animation-delay:500ms]" />
+                </div>
+              </div>
             </div>
             <div className="lg:col-span-5 lg:pb-4">
-              <p className={`text-xl text-muted-foreground leading-relaxed transition-all duration-1000 delay-200 ${
+              <p className={`text-xl text-white/90 leading-relaxed transition-all duration-1000 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}>
-                Deploy autonomous AI agents that execute complex tasks across distributed infrastructure. No supervision required.
+                <span className="font-display text-2xl text-blue-300 brand-blue-animate">International Migration Line</span> - O'zbekistonda ko'p yillik tajribaga ega, rasmiy litsenziyaga ega bo'lgan ishonchli xususiy bandlik agentligi.
+                <br />
+                <br />
+                Biz ish izlovchilarga xorijda munosib ish va martaba yo'lini topishda yordam beramiz. Agentligimiz axloqiy yollash tamoyillariga amal qiladi va har bir mijozga quyidagilarni taqdim etadi:
+                <br />
+                <br />
+                Kasbiy yo'naltirish va maslahat
+                <br />
+                Ishga joylashish jarayonida to'liq qo'llab-quvvatlash
+                <br />
+                Hujjatlar va rasmiylashtirishda yordam
+                <br />
+                Ish beruvchilar bilan to'g'ridan-to'g'ri hamkorlik
+                <br />
+                <br />
+                Bizning asosiy qadriyatlarimiz - ishonch, halollik va xalqaro standartlarga mos xizmat ko'rsatish.
               </p>
             </div>
           </div>
@@ -224,11 +249,10 @@ export function FeaturesSection() {
             <div className="relative flex-1 p-8 lg:p-12 bg-black">
               <ParticleVisualization />
               <div className="relative z-10">
-                <span className="font-mono text-sm text-muted-foreground">{features[0].number}</span>
-                <h3 className="text-3xl lg:text-4xl font-display text-white mt-4 mb-6 group-hover:translate-x-2 transition-transform duration-500">
+                <h3 className="text-4xl lg:text-5xl font-display font-semibold text-white -mt-2 mb-6 group-hover:translate-x-2 transition-transform duration-500">
                   {features[0].title}
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed max-w-md mb-8">
+                <p className="text-lg text-white leading-relaxed max-w-md mb-8 px-5 py-[11px]">
                   {features[0].description}
                 </p>
                 <div>
@@ -266,6 +290,21 @@ export function FeaturesSection() {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .brand-blue-animate {
+          animation: brandBlueShift 2.8s ease-in-out infinite;
+        }
+
+        @keyframes brandBlueShift {
+          0%,
+          100% {
+            color: rgb(147 197 253);
+          }
+          50% {
+            color: rgb(56 189 248);
+          }
+        }
+      `}</style>
     </section>
   );
 }

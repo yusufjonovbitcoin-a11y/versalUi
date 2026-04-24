@@ -69,33 +69,25 @@ export function HowItWorksSection() {
     <section
       id="how-it-works"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-[oklch(0.09_0.01_260)] text-white overflow-hidden"
+      className="relative py-[1px] lg:py-[1px] bg-[oklch(0.09_0.01_260)] text-white overflow-hidden"
     >
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-white/[0.02] blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Header — titre + image cerisier */}
-        <div className="relative mb-0 lg:mb-0 grid lg:grid-cols-2 gap-4 lg:gap-12 items-end">
+        <div className="relative mb-0 lg:mb-0 grid lg:grid-cols-2 gap-4 lg:gap-0 items-end">
           {/* Titre colonne gauche */}
-          <div className="overflow-hidden pb-0 lg:pb-32">
-            <div className={`transition-all duration-1000 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"}`}>
-              <span className="inline-flex items-center gap-3 text-sm font-mono text-white/40 mb-8">
-                <span className="w-12 h-px bg-white/20" />
-                Process
-              </span>
-            </div>
-            
-            <h2 className={`text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.85] transition-all duration-1000 delay-100 ${
+          <div className="relative z-30 overflow-visible pb-0 lg:pb-[20px] lg:pr-12">
+            <h2 className={`relative z-30 text-6xl md:text-7xl lg:text-[128px] font-display tracking-tight leading-[0.85] transition-all duration-1000 delay-100 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
             }`}>
-              <span className="block">Define.</span>
-              <span className="block text-white/30">Deploy.</span>
-              <span className="block text-white/10">Scale.</span>
+              <span className="block">Xalqaro ish</span>
+              <span className="block text-white/30 text-[0.62em] leading-[1.1]">imkoniyatlari</span>
             </h2>
           </div>
 
           {/* Image cerisier — se colle en bas sur les blocs */}
-          <div className={`relative h-[380px] lg:h-[720px] overflow-hidden transition-all duration-1000 delay-200 ${
+          <div className={`relative z-0 h-[380px] lg:h-[720px] overflow-hidden transition-all duration-1000 delay-200 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}>
             <img
@@ -125,13 +117,13 @@ export function HowItWorksSection() {
               {/* Step number with animated line */}
               <div className="flex items-center gap-4 mb-8">
                 <span className={`text-4xl font-display transition-colors duration-300 ${
-                  activeStep === index ? "text-[#eca8d6]" : "text-white/20"
+                  activeStep === index ? "text-white" : "text-white/20"
                 }`}>
                   {step.number}
                 </span>
                 <div className="flex-1 h-px bg-white/10 overflow-hidden">
                   {activeStep === index && (
-                    <div className="h-full bg-[#eca8d6]/50 animate-progress" />
+                    <div className="h-full bg-white/70 animate-progress" />
                   )}
                 </div>
               </div>
@@ -152,7 +144,7 @@ export function HowItWorksSection() {
               </p>
 
               {/* Active indicator */}
-              <div className={`absolute bottom-0 left-0 right-0 h-1 bg-[#eca8d6] transition-transform duration-500 origin-left ${
+              <div className={`absolute bottom-0 left-0 right-0 h-1 bg-white transition-transform duration-500 origin-left ${
                 activeStep === index ? "scale-x-100" : "scale-x-0"
               }`} />
             </button>

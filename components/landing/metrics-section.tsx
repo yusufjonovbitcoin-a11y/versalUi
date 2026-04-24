@@ -239,7 +239,7 @@ export function MetricsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-32 lg:py-40 overflow-hidden">
+    <section ref={sectionRef} className="relative py-32 lg:py-40 overflow-hidden bg-black">
       <GridBackground />
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
@@ -288,9 +288,6 @@ export function MetricsSection() {
           }`}>
             <div className="text-4xl md:text-5xl lg:text-6xl font-display tracking-tight mb-4 whitespace-nowrap overflow-hidden">
               <AnimatedNumber end={metrics[0].value} suffix={metrics[0].suffix} prefix={metrics[0].prefix} />
-            </div>
-            <div className="mb-6">
-              <DotGraph color="white" height={36} freq1={0.28} freq2={0.09} freqT={0.5} speed={0.018} baseline={0.35} amplitude={0.55} />
             </div>
             <div className="text-lg text-foreground mb-2">{metrics[0].label}</div>
             <div className="text-sm text-muted-foreground font-mono">{metrics[0].sublabel}</div>
